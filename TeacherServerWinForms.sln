@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "btck", "btck\btck.csproj", "{B9AE0606-1137-40EA-B7C3-A22770DD4AB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentClientWinForms", "StudentClientWinForms\StudentClientWinForms.csproj", "{AE259815-81AA-497C-962D-37F4E0215C2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9AE0606-1137-40EA-B7C3-A22770DD4AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9AE0606-1137-40EA-B7C3-A22770DD4AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9AE0606-1137-40EA-B7C3-A22770DD4AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9AE0606-1137-40EA-B7C3-A22770DD4AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE259815-81AA-497C-962D-37F4E0215C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE259815-81AA-497C-962D-37F4E0215C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE259815-81AA-497C-962D-37F4E0215C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE259815-81AA-497C-962D-37F4E0215C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C2669F6-1E39-4C0F-84F4-ED24C4E8BBAF}
+	EndGlobalSection
+EndGlobal
