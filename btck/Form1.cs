@@ -307,19 +307,30 @@ namespace btck
             // Nếu là text or link
             else
             {
+                bool isLink = input.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
+                    || input.StartsWith("https://", StringComparison.OrdinalIgnoreCase)
+                    || input.StartsWith("www.", StringComparison.OrdinalIgnoreCase);
+
+                string msgType = isLink ? "link" : "text";
+
+                AppendLog(isLink ? $"Send link: {input}" : $"Send text: {input}");
+
                 foreach (var item in targets)
                 {
                     if (!_clients.TryGetValue(item.Id, out ClientSession s)) continue;
 
                     try
                     {
-                        await Wire.WriteJsonAsync(s.Stream, new BroadcastMsg("text", "Teacher", input));
+                        await Wire.WriteJsonAsync(s.Stream, new BroadcastMsg(msgType, "Teacher", input));
                         ok++;
                     }
-                    catch { fail++; }
+                    catch
+                    {
+                        fail++;
+                    }
                 }
 
-                AppendLog($"Text send done. OK={ok}, Fail={fail}");
+                AppendLog($"{(isLink ? "Link" : "Text")} send done. OK={ok}, Fail={fail}");
             }
 
             selectedPath = null;

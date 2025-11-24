@@ -157,7 +157,7 @@ namespace StudentClientWinForms
                                 // Dùng bản sync cho .NET Framework
                                 File.WriteAllBytes(filePath, fileData);
 
-                                Append("[DEBUG] Lưu file tại: " + filePath);
+                                //Append("[DEBUG] Lưu file tại: " + filePath);
 
                                 string id = Guid.NewGuid().ToString("N");
                                 _fileLinkMap[id] = filePath;
@@ -192,7 +192,7 @@ namespace StudentClientWinForms
                                 // Lưu file nén .zip
                                 File.WriteAllBytes(zipPath, zipData);
 
-                                Append("[DEBUG] Lưu thư mục nén tại: " + zipPath);
+                                //Append("[DEBUG] Lưu thư mục nén tại: " + zipPath);
 
                                 // Tạo ID map để click mở file
                                 string id = Guid.NewGuid().ToString("N");
@@ -370,7 +370,7 @@ namespace StudentClientWinForms
 
             try
             {
-                MessageBox.Show("Đang mở file:\n" + path, "Opening");
+                //MessageBox.Show("Đang mở file:\n" + path, "Opening");
                 Process.Start(new ProcessStartInfo(path) { UseShellExecute = true });
             }
             catch (Exception ex)
